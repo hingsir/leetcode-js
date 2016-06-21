@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-    var ceil = arguments.length === 3 ? arguments[2] : 0;
+    var ceil = arguments[2] || 0;
 
     if(!l1 && !l2 && ceil === 0) return;
 

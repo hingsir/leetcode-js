@@ -16,3 +16,13 @@ var twoSum = function(nums, target) {
     }
     return null;
 };
+
+//better https://github.com/hanzichi/leetcode/blob/master/Algorithms/Two%20Sum/two-sum.js
+var twoSum2 = function(nums, target) {
+    var a = [];
+    for (var i = 0, len = nums.length; i < len; i++) {
+        var tmp = target - nums[i];
+        if (a[tmp] !== undefined) return [a[tmp], i];
+        a[nums[i]] = i;
+    }
+};
